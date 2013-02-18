@@ -1,0 +1,35 @@
+name: NPCShop
+version: 1.0
+main: com.github.DarkSeraphim.NPCShop.NPCShop
+depends: [Essentials]
+
+commands:
+  npc:
+    description: NPCShop commands
+    usage: /<command>
+    
+permissions:
+  npc.*:
+    children:
+      npc.spawn: true
+  npc.spawn:
+    description: Permission node to spawn NPCs
+    default: op
+  npc.modify:
+    description: Permission node for all modifications on NPCs
+    children:
+      npc.create: true
+      npc.edit: true
+      npc.delete: true
+  npc.create:
+    description: Permission node to create new NPCs
+    default: op
+  npc.edit:
+    description: Permission node to edit existing NPCs
+    default: op
+  npc.delete:
+    description: Permission node to delete living NPCs
+    default: op
+  npc.use.*:
+    description: Permission node to use all NPCs
+    default: op

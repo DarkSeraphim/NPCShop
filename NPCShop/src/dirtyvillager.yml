@@ -1,0 +1,56 @@
+################################################################################
+#                                  EXAMPLE CONFIG                              #
+################################################################################
+
+# Entity must be a valid, spawnable entity type (with the exception of players,
+#  who get native support for the time being
+entity: villager
+entity-data: 0
+
+# The equipment
+# Data is optional, currently used as R|B|G for leather
+head: 0
+head-data: '0|0|0'
+chest: 0
+chest-data: '0|0|0'
+leggings: 0
+leggings-data: '0|0|0'
+boots: 0
+boots-data: '0|0|0'
+
+# Holding this item
+hand: 0
+
+# If true, players need 'npc.use.<name>' to trade
+use-permission: false
+
+# Messages send on allowance or denial
+# %n is replaced with the NPC name, %p with the player name
+allow-messages:
+ - '<[NPC] %n> Yes %p, what can I help you with (^_^)'
+deny-messages:
+ - '<[NPC] %n> Sorry %p, I am a bit busy (-_-)'
+
+# The items
+items:
+# The slot which it is placed in. This is valid if  -1 < 'slot' < 27
+  '0':
+#   ID according to minecraft
+    id: 3
+#   A datavalue, if neccesary (broken tools, wool, etc.)
+    data: 0
+#   Name and lore are for items used by other plugina, which are buyable
+#   Optionally a name
+    name: 'Dirt'
+#   Optionally a lore
+    lore:
+      - this is lore
+      - for dirt
+      - btw, price is already included
+#   Buy price, sell price is the half by default
+    buy: 10
+#   If that is not the case, define it yourself
+    sell: 5
+#   If it is sellable, specify here
+    sellable: false
+    

@@ -1,0 +1,5 @@
+# Time is measured in seconds
+
+currency: '$'
+save-interval: 300
+world: world
